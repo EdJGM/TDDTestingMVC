@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\reqnrolltesting\\features\\crudstestcliente.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|solutionrelative:reqnrolltesting\\features\\crudstestcliente.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C46694-B940-4077-BDA0-C80C25C914EA}|TDDTestingMVC\\TDDTestingMVC.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\tddtestingmvc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C46694-B940-4077-BDA0-C80C25C914EA}|TDDTestingMVC\\TDDTestingMVC.csproj|solutionrelative:tddtestingmvc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\reqnrolltesting\\stepdefinitions\\crudstestclientestepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|solutionrelative:reqnrolltesting\\stepdefinitions\\crudstestclientestepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C46694-B940-4077-BDA0-C80C25C914EA}|TDDTestingMVC\\TDDTestingMVC.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\tddtestingmvc\\data\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C46694-B940-4077-BDA0-C80C25C914EA}|TDDTestingMVC\\TDDTestingMVC.csproj|solutionrelative:tddtestingmvc\\data\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\reqnrolltesting\\utilities\\webdrivermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|solutionrelative:reqnrolltesting\\utilities\\webdrivermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|c:\\users\\lenovo\\desktop\\uni\\octubre-marzo 2025\\pruebassoftware\\tercer parcial\\clases\\mvcproductos\\tddtestingmvc\\reqnrolltesting\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}|ReqnrollTesting\\ReqnrollTesting.csproj|solutionrelative:reqnrolltesting\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CRUDSTestCliente.feature",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Features\\CRUDSTestCliente.feature",
+              "RelativeDocumentMoniker": "ReqnrollTesting\\Features\\CRUDSTestCliente.feature",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Features\\CRUDSTestCliente.feature",
+              "RelativeToolTip": "ReqnrollTesting\\Features\\CRUDSTestCliente.feature",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXvSURBVFhHnZdrbBRVFMd/d3ZatvtqKWXb0rKUVspDEFREHqKgxDQosUZaFj6Ij0TUaIiRkBBRowQ1xJgYE2I0xsSAlEeRQGqQGCkKlCBEScvDUgqVUrYPqO3ustvdzly/7LSz06W2/r6d8z93z9k759y5IxgtewoFUk9H6hkIoSJ1iRBxbCKCwxlneZN1xd2RUgqr767szLWjiHsQzAKKgULABWjAPwhakTQjOU9cNvN8e9z6E6n47wL25KroYg6wClgAzAQyrWGADtwGGoBaYDeK2khlq24NNGOzOpKQCOrd6xF8DDwJTAbs1rAEAnAARcBDwKPoWgfV4UvWQDOpd\u002BDbIoE9NgGhbwXWWuVRIJFsQIiv8d8MWkVS7oAE/rL7EHIL4AdUs5yZ5iFdSSOmxwZ8GTY7ufbxxGWcfqmZwwWCeSCCVLjr2Rca0hdDC5ie5wHeAF4CnGZphqeUbXM2M2/cHK6G/\u002BZWrBun6uD5ogrenvoqk50\u002BjnXWmZcAZAClSC7xjPMKP4SlWVTMBgCS\u002B4F1gNsq\u002BX3l\u002BH3lvFqyloqJK3DYMihy\u002Btg0402emrCMDdNeRxVJG2ZQhOAV0kWuVUguYE9uWqLhvEn\u002BBE2ha\u002BhSYreNYWHOPLLSM3lw7Cx8jkIALgeb6Zf91mUk8jwNrEglDKKLucB8s6vIOZFSdwlO1cH\u002B1hoOB44S1foI94fRpEZPPEhcj9McamHrxc/NS60I4GUOTUh67Mk9sNL1FrDQMItdPr6cu43ygjLuzZzKhd7LHL55lLZIgNrOkzT0XKK3v5eeeJBvr1VxJFB7tx0wyCXGLqpDtwzH4BjuL8ggpv1i3oHVk57l\u002B/nbAejTY5zoPE3Zr2tQEEggpsdQhMIYJZ0\u002BPYYuhz1zDNbhD3xlGIOPIKYXAeMGbODHtp851HaEG5EAof4wpZ4SFuc8TJ8eGxhDXepEtOhIkwM8YDYGd6AqbxGwE5hkDnCrLhaNn0e\u002B3cuNSIDajhPE9CHjPBpq8AeeNgxzEw4dSSCs3eGP7npOdJ2mruvMsMltQmFW5nQeGDuLselZVtkgw2wMJhUyBCR1kE3Y\u002BHDmRo48VsWhxd9xZEkVU90l5pAkPpm9mf2PfMPehV9TvegbyvKXWkOw5jAVIDqAqFmsnLiCd2as576sGUxxF5MzJptAtANFKCjCtDTxJP/sbiDP7qXYNYml3oV8P3/7gGaixWwMjmFF1h2kXgaUGq6stEyWeBcQ0fo4ffsP3mvYRluknRUFT\u002BK153AjEsClOlk\u002B4Qk8qptjXXVoUsOlOonJOMe7fmfv9YMDKRLsYF/olGEkl7c7/y2k/MwwVaGyxLsAu83OX8Emroau89F9m3hh8ipOdp3htbMbybWPp2bxDjqiXbzf8Ck/BY4y3TOF8WNyaAxeoeVOa1IKkA/hbz9jWJYCvIVIpdHaKAYzM6dxalkNTtVB3a2zrKl7DZ\u002BjgNrH9yMQXOhtZPbhx61vRDN/o2hTqOwceJUmd/6qjlYE2xPXrCHMzZ6NU3WgSZ0/uxvoifcSiHbQGGwGYKq7hMmupCk2owHbzckZchQDVLpbkTwMFFilqN7HdM8UGoPNfHnlOxqDzUS0KBEtilN1cLzrNLtafiCe\u002Bji\u002BCPIj9oU7zc4hLcru/HSkfA74BPBZ5RJXEQqCljutA2eCS3WSb/fSFbtNd6zHugQgBHILivyCyo6IWRhaAEBVrhPEi8AHQLZVHiUSqEHIN/C2t2A5GlIXYLArrxzBp4njOeVNYwScRIh1rLrZYBVI2QNmqkOXWOk6lZiK7MQtafiikzmPlOvxB85aBYPhCwBY62kjzm8gzgHtiWt5FpBmDTWhJb4N3mV1e61VNDPyf/PjPYKesBtBIcj1wCvWkAR9wAGE2IrOBVbfTDnSBiMvwGBPgQNd3wRys8krgSBwFdiCx3WA5U3DJjZI\u002BQoeBRK4DhwEPkAoz\u002BAPVI80Of9rB3bn25H4QS5FiPNIWQ/iHEp/gMrOEV\u002BLDEZfwK48AcIDMg1V7aWiNeloHS3/AuhrFiERHCenAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-02-27T17:24:54.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\TDDTestingMVC\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "TDDTestingMVC\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\TDDTestingMVC\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "TDDTestingMVC\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwCcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T19:01:13.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CRUDSTestClienteStepDefinitions.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\StepDefinitions\\CRUDSTestClienteStepDefinitions.cs",
+              "RelativeDocumentMoniker": "ReqnrollTesting\\StepDefinitions\\CRUDSTestClienteStepDefinitions.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\StepDefinitions\\CRUDSTestClienteStepDefinitions.cs",
+              "RelativeToolTip": "ReqnrollTesting\\StepDefinitions\\CRUDSTestClienteStepDefinitions.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAFMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T17:27:07.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\TDDTestingMVC\\data\\Cliente.cs",
+              "RelativeDocumentMoniker": "TDDTestingMVC\\data\\Cliente.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\TDDTestingMVC\\data\\Cliente.cs",
+              "RelativeToolTip": "TDDTestingMVC\\data\\Cliente.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T19:11:19.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebDriverManager.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Utilities\\WebDriverManager.cs",
+              "RelativeDocumentMoniker": "ReqnrollTesting\\Utilities\\WebDriverManager.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Utilities\\WebDriverManager.cs",
+              "RelativeToolTip": "ReqnrollTesting\\Utilities\\WebDriverManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T17:39:41.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Hooks.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Hooks\\Hooks.cs",
+              "RelativeDocumentMoniker": "ReqnrollTesting\\Hooks\\Hooks.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Uni\\Octubre-Marzo 2025\\PruebasSoftware\\Tercer Parcial\\Clases\\mvcProductos\\TDDTestingMVC\\ReqnrollTesting\\Hooks\\Hooks.cs",
+              "RelativeToolTip": "ReqnrollTesting\\Hooks\\Hooks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T18:21:54.08Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 761,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

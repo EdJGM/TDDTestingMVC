@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="wrapper" class="toggled">
+    <!-- Sidebar -->
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <h2>Sistema Clientes</h2>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="active">
+                <a href="~/Home/index"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="~/Cliente/index"><i class="fa fa-user"></i> Clientes</a>
+            </li>
+            <li>
+                <a href="~/Pedido/index"><i class="fa fa-user"></i>Pedidos</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Navbar -->
+    <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <section id="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="content-title">Test</h2>
+				<br />
+                <h2>Sistema de Clientes</h2>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            padding-bottom: 30px;
+            position: relative;
+            min-height: 100%;
+        }
+
+        a {
+            transition: background 0.2s, color 0.2s;
+        }
+
+            a:hover, a:focus {
+                text-decoration: none;
+            }
+
+        /* Ajuste para que el contenido se expanda correctamente */
+        #wrapper {
+            display: flex;
+            transition: all 0.5s ease;
+        }
+
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #222;
+            transition: all 0.5s ease;
+        }
+
+        /* Para ocultar el sidebar cuando no está activado */
+        #wrapper:not(.toggled) #sidebar-wrapper {
+            width: 0;
+            left: -250px;
+        }
+
+        /* Ajuste para que el contenido se expanda */
+        #content-wrapper {
+            width: 100%;
+            padding: 15px;
+            transition: margin-left 0.5s ease;
+        }
+
+        /* Ajuste para que el navbar no se solape */
+        #navbar-wrapper {
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #eee;
+            padding: 10px;
+            transition: margin-left 0.5s ease;
+        }
+
+        /* Cuando el sidebar está abierto, ajusta el contenido */
+        #wrapper.toggled #content-wrapper {
+            margin-left: 150px;
+        }
+
+        #wrapper.toggled #navbar-wrapper {
+            margin-left: 250px;
+        }
+
+        .sidebar-brand {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+            .sidebar-brand h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 24px;
+                color: #fff;
+            }
+
+        .sidebar-nav {
+            position: absolute;
+            top: 75px;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .sidebar-nav > li {
+                text-indent: 10px;
+                line-height: 42px;
+            }
+
+                .sidebar-nav > li a {
+                    display: block;
+                    text-decoration: none;
+                    color: #757575;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+
+                .sidebar-nav > li > a:hover,
+                .sidebar-nav > li.active > a {
+                    text-decoration: none;
+                    color: #fff;
+                    background: #F8BE12;
+                }
+
+                .sidebar-nav > li > a i.fa {
+                    font-size: 24px;
+                    width: 60px;
+                }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector("#sidebar-toggle");
+            const wrapper = document.querySelector("#wrapper");
+
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+                wrapper.classList.toggle("toggled");
+            });
+        });
+    </script>
+}

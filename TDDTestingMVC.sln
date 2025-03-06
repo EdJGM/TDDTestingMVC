@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDTestingMVC", "TDDTestingMVC\TDDTestingMVC.csproj", "{95C46694-B940-4077-BDA0-C80C25C914EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClientes", "TestClientes\TestClientes.csproj", "{97D13325-6112-4386-9910-DDBBEF2B7049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReqnrollTesting", "ReqnrollTesting\ReqnrollTesting.csproj", "{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95C46694-B940-4077-BDA0-C80C25C914EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C46694-B940-4077-BDA0-C80C25C914EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C46694-B940-4077-BDA0-C80C25C914EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C46694-B940-4077-BDA0-C80C25C914EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D13325-6112-4386-9910-DDBBEF2B7049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D13325-6112-4386-9910-DDBBEF2B7049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D13325-6112-4386-9910-DDBBEF2B7049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D13325-6112-4386-9910-DDBBEF2B7049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB991EC9-FE19-40CE-AEC7-0AB5C67D2F52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

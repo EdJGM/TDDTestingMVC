@@ -1,0 +1,462 @@
+﻿@model IEnumerable<TDDTestingMVC.data.Pedido>
+
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+<div id="wrapper" class="toggled">
+    <!-- Sidebar -->
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <h2>Sistema Ventas</h2>
+        </div>
+        <ul class="sidebar-nav">
+            <li>
+                <a href="~/Home/index"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="~/Cliente/index"><i class="fa fa-user"></i> Clientes</a>
+            </li>
+            <li class="active">
+                <a href="~/Pedido/index"><i class="fa fa-shopping-cart"></i> Pedidos</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Navbar -->
+    <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Content -->
+    <section id="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="content-title">Pedidos</h2>
+                <br />
+
+                @if (ViewBag.ClienteId != null)
+                {
+                    <h3>Pedidos del cliente: @ViewBag.NombreCliente</h3>
+                    <a href="~/Pedido/Index" class="btn btn-secondary mb-3">
+                        <i class="fa fa-arrow-left"></i> Volver a todos los pedidos
+                    </a>
+                }
+                else if (ViewBag.Estado != null)
+                {
+                    <h3>Pedidos con estado: @ViewBag.Estado</h3>
+                    <a href="~/Pedido/Index" class="btn btn-secondary mb-3">
+                        <i class="fa fa-arrow-left"></i> Volver a todos los pedidos
+                    </a>
+                }
+
+                <div class="d-flex justify-content-between mb-3">
+                    <a href="~/Pedido/Create" class="btn btn-custom">
+                        <i class="fa fa-plus"></i> Crear Pedido
+                    </a>
+
+                    <!-- Filtros para pedidos -->
+                    <div class="dropdown">
+                        <button class="btn btn-custom dropdown-toggle" type="button" id="filtroEstado" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-filter"></i> Filtrar por Estado
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="filtroEstado">
+                            <a class="dropdown-item" href="~/Pedido/PedidosPorEstado?estado=Pendiente">Pendientes</a>
+                            <a class="dropdown-item" href="~/Pedido/PedidosPorEstado?estado=Completado">Completados</a>
+                            <a class="dropdown-item" href="~/Pedido/PedidosPorEstado?estado=Cancelado">Cancelados</a>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.PedidoID)</th>
+                            <th>Cliente</th>
+                            <th>@Html.DisplayNameFor(model => model.FechaPedido)</th>
+                            <th>@Html.DisplayNameFor(model => model.Monto)</th>
+                            <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var pedido in Model)
+                        {
+                            <tr>
+                                <td>@pedido.PedidoID</td>
+                                <td>
+                                    <a href="~/Pedido/PedidosPorCliente?clienteId=@pedido.ClienteID" class="cliente-link">
+                                        Cliente #@pedido.ClienteID
+                                    </a>
+                                </td>
+                                <td>@pedido.FechaPedido.ToShortDateString()</td>
+                                <td>$@pedido.Monto.ToString("N2")</td>
+                                <td>
+                                    @{
+                                        string badgeClass = pedido.Estado switch
+                                        {
+                                            "Completado" => "badge-success",
+                                            "Cancelado" => "badge-danger",
+                                            _ => "badge-warning"
+                                        };
+                                    }
+                                    <span class="badge @badgeClass">@pedido.Estado</span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a asp-action="Edit" asp-route-id="@pedido.PedidoID" class="btn btn-warning btn-sm">
+                                            <i class="fa fa-edit"></i> Editar
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@pedido.PedidoID" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i> Eliminar
+                                        </a>
+                                    </div>
+
+                                    <!-- Botones para cambiar estados -->
+                                    @if (pedido.Estado == "Pendiente")
+                                    {
+                                        <div class="mt-1">
+                                            <a asp-action="CambiarEstado" asp-route-id="@pedido.PedidoID" asp-route-nuevoEstado="Completado"
+                                               class="btn btn-success btn-sm">
+                                                <i class="fa fa-check"></i> Completar
+                                            </a>
+                                            <a asp-action="CambiarEstado" asp-route-id="@pedido.PedidoID" asp-route-nuevoEstado="Cancelado"
+                                               class="btn btn-danger btn-sm">
+                                                <i class="fa fa-times"></i> Cancelar
+                                            </a>
+                                        </div>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            padding-bottom: 30px;
+            position: relative;
+            min-height: 100%;
+        }
+
+        a {
+            transition: background 0.2s, color 0.2s;
+        }
+
+            a:hover, a:focus {
+                text-decoration: none;
+            }
+
+        /* Ajuste para que el contenido se expanda correctamente */
+        #wrapper {
+            display: flex;
+            transition: all 0.5s ease;
+        }
+
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #222;
+            transition: all 0.5s ease;
+        }
+
+        /* Para ocultar el sidebar cuando no está activado */
+        #wrapper:not(.toggled) #sidebar-wrapper {
+            width: 0;
+            left: -250px;
+        }
+
+        /* Ajuste para que el contenido se expanda */
+        #content-wrapper {
+            width: 100%;
+            padding: 15px;
+            transition: margin-left 0.5s ease;
+        }
+
+        /* Ajuste para que el navbar no se solape */
+        #navbar-wrapper {
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #eee;
+            padding: 10px;
+            transition: margin-left 0.5s ease;
+        }
+
+        /* Cuando el sidebar está abierto, ajusta el contenido */
+        #wrapper.toggled #content-wrapper {
+            margin-left: 150px;
+        }
+
+        #wrapper.toggled #navbar-wrapper {
+            margin-left: 250px;
+        }
+
+        .sidebar-brand {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+            .sidebar-brand h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 24px;
+                color: #fff;
+            }
+
+        .sidebar-nav {
+            position: absolute;
+            top: 75px;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+            .sidebar-nav > li {
+                text-indent: 10px;
+                line-height: 42px;
+            }
+
+                .sidebar-nav > li a {
+                    display: block;
+                    text-decoration: none;
+                    color: #757575;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+
+                .sidebar-nav > li > a:hover,
+                .sidebar-nav > li.active > a {
+                    text-decoration: none;
+                    color: #fff;
+                    background: #F8BE12;
+                }
+
+                .sidebar-nav > li > a i.fa {
+                    font-size: 24px;
+                    width: 60px;
+                }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+            }
+
+            .table tbody + tbody {
+                border-top: 2px solid #dee2e6;
+            }
+
+            .table .table {
+                background-color: #fff;
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+            .table-bordered th,
+            .table-bordered td {
+                border: 1px solid #dee2e6;
+            }
+
+            .table-bordered thead th,
+            .table-bordered thead td {
+                border-bottom-width: 2px;
+            }
+
+        .btn-custom {
+            background-color: black;
+            color: white;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+            .btn-custom:hover {
+                background-color: #F8BE12;
+                color: black;
+            }
+
+        .btn-group .btn {
+            margin-right: 5px;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .badge-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .badge-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .cliente-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .cliente-link:hover {
+                text-decoration: underline;
+            }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .dropdown-toggle::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 10rem;
+            padding: 0.5rem 0;
+            margin: 0.125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+
+        .dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 0.25rem 1.5rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+        }
+
+            .dropdown-item:hover, .dropdown-item:focus {
+                color: #16181b;
+                text-decoration: none;
+                background-color: #f8f9fa;
+            }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            border-radius: 0.2rem;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector("#sidebar-toggle");
+            const wrapper = document.querySelector("#wrapper");
+
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+                wrapper.classList.toggle("toggled");
+            });
+
+            // Para los dropdowns
+            document.querySelectorAll('.dropdown-toggle').forEach(function(dropdown) {
+                dropdown.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var menu = this.nextElementSibling;
+                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+
+            // Cerrar dropdown cuando se hace clic fuera de él
+            document.addEventListener('click', function(e) {
+                if (!e.target.matches('.dropdown-toggle')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                        menu.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+}
